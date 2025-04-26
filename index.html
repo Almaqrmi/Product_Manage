@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+
+    <title>almaqrmi-phone</title>
+</head>
+<body>
+    <div class="contain">
+        <div class="head">
+            <h1>almaqrmi Phone</h1>
+            <p>Products Managements Sysyem</p>
+        </div>
+        <hr/>
+        <div class="inputs">
+            <div class="nameOfProduct">
+                <input type="text" id="title" placeholder="title">
+                <input type="text" name="" id="category" placeholder="category">
+                <input type="number" name="" id="count" placeholder="count">
+                <input id="image" type="file" accept="image/*" placeholder="Product Image">
+            </div>
+            <div class="price">
+            <input onkeyup="GetTotal()" type="number" id="price" placeholder="price">
+            <input onkeyup="GetTotal()" type="number" id="taxes" placeholder="taxes">
+            <input onkeyup="GetTotal()" type="number" id="ads" placeholder="ads">
+            <input onkeyup="GetTotal()" type="number" id="discount" placeholder="discount">
+            <small onkeyup="GetTotal()" id="total" ></small>
+        </div>
+        <button id="submit">Add</button>
+        <div class="search">
+            <input id="search" style="width: 75%;" type="text" placeholder="Search for a product">
+            <button id="searchBtn" style="margin-right:5px; width: 120px; height: 50px;">Search</button>  
+            <select id="searchType">
+                <option value="title">By Title</option>
+                <option value="category">By Category</option>
+            </select>
+          </div>
+          <div id="deleteAll">
+
+          </div>
+        </div>
+        <div class="outputs">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Taxes</th>
+                    <th>Ads</th>
+                    <th>Discount</th>
+                    <th>Total</th>
+                    <th>Category</th>
+                    <th>Image</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                <tbody id="tbody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="Script.js"></script>
+</body>
+</html>
